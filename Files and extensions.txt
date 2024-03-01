@@ -1,0 +1,48 @@
+text files extensions:
+
+csv
+dat
+data
+xlsx
+arff
+
+------------------------------------
+**** csv and data files ****              
+
+import pandas as pd
+df1= pd.read_csv('file_name.csv')
+df2= pd.read_csv('file_name.data')
+------------------------------------
+**** xlsx files **** 
+
+import pandas as pd
+df=pd.read_excel('file_name.xlsx') 
+------------------------------------
+**** dat files ****
+import pandas as pd
+df = pd.read_fwf('file_name.dat')
+------------------------------------
+**** arff files ****
+
+from scipy.io.arff import loadarff
+my_data = loadarff('file_name.arff')
+df = pd.DataFrame(my_data[0])
+------------------------------------
+Image files:
+
+1-using Matplotlib library
+import matplotlib.pyplot as plt
+img = plt.imread(img_dir)
+--------------------------------------------------
+2-using OpenCV library
+import cv2
+img = cv2.imread(img_dir)
+--------------------------------------------------
+3-using Pillow  library
+from PIL import Image
+img = Image.open(img_dir)
+-------------------------------------------------
+4-using scikit-image  library
+from skimage import io
+img = io.imread(img_dir)
+--------------------------------------------------

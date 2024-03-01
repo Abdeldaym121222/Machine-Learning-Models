@@ -1,0 +1,8 @@
+R^2 Square
+
+Simple Linear Regression | multiLinear Regression
+    Y = b0+b1X1            Y = b0+b1X1+b2X2
+SS(res) = sum(yi-yi^)^2
+SS(tot) = sum(yi-y(avg))^2
+
+R^2 = 1-(SS(res)/SS(tot))

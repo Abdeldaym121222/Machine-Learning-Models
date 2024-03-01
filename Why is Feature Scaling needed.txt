@@ -1,0 +1,16 @@
+Why is Feature Scaling needed
+Feature scaling is about transforming the values of different numerical 
+features to fall within a similar range like each other.
+ The feature scaling is used to prevent the supervised learning models 
+from getting biased toward a specific range of values. For example,
+ if your model is based on linear regression and you do not scale features, 
+then some features may have a higher impact than others which will affect 
+the performance of predictions by giving undue advantage for some variables over others. 
+This puts certain classes at disadvantage while training model. 
+This is why it becomes important to use scaling algorithms so that you can standardize your feature values.
+
+This process of feature scaling is done so that all features can share 
+the same scale and hence avoid problems such as some of the following
+Loss in accuracy
+Increase in computational cost as data values vary widely over different orders of magnitude.
+

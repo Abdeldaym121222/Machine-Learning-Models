@@ -1,0 +1,35 @@
+What is Normalization?
+Normalization refers to the rescaling of the features to a range of [0, 1],
+which is a special case of min-max scaling. To normalize the data, 
+the min-max scaling can be applied to one or more feature columns.
+ Here is the formula for normalizing data based on min-max scaling. 
+Normalization is useful when the data is needed in the bounded intervals.
+
+Nromalization based on min-max scaling
+Fig 2. Normalizing data based on min-max scaling concepts
+
+ X(norm) = (x-x(min))/(x(max)-x(min))
+
+def normalize(values):
+    return (values - values.min())/(values.max() - values.min())
+
+
+
+
+What is Standardization?
+The standardization technique is used to center the feature columns at mean 0 with a 
+standard deviation of 1 so that the feature columns have the same parameters 
+as a standard normal distribution. Unlike Normalization, standardization maintains 
+useful information about outliers and makes the algorithm less sensitive to them 
+in contrast to min-max scaling, which scales the data to a limited range of values. 
+Here is the formula for standardization.
+
+def standardize(values):
+    return (values - values.mean())/values.std()
+
+
+
+# conclusion
+Feature scaling is not required for algorithms such as random forest or decision tree
+Standardization and normalization are two most common techniques for feature scaling.
+Normalization is about transforming the feature values to fall within the bounded intervals (min and max)
